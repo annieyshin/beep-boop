@@ -1,0 +1,19 @@
+.jumbotron {
+  width: 100%;
+  color: gold;
+  background-color: white;
+}
+
+.container {
+  width: 100%;
+}
+
+#robot {
+  height: 120px;
+  float: left;
+}
+
+body {
+  background-color: silver;
+  color: purple;
+}
