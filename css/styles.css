@@ -17,3 +17,7 @@ body {
   background-color: silver;
   color: purple;
 }
+
+#result {
+  display: none;
+}

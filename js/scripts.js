@@ -1,4 +1,4 @@
-var threedivisible = function(input) {
+var beepboop = function(input) {
   if (input % 3 === 0) {
     return true;
   } else {
@@ -7,13 +7,24 @@ var threedivisible = function(input) {
 };
 
 $(document).ready(function () {
-
   $("form#ourForm").submit(function(event) {
     event.preventDefault();
-    var input = parseInt($("#field").val());
+    var input = parseInt($("input#field").val());
     var result = beepboop(input);
     $("#result").text(result);
     $("#result").show();
+
+$("#result").text(input);
+
+if(result) {
+  $("#result").text("I'm sorry Dave, I can't do that");
+} else {
+  $("#result").text(input);
+}
+
+console.log("hello");
+
+
   });
 
 });
