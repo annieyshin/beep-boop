@@ -1,41 +1,35 @@
 var array = [];
 var results = [];
 
-function blahboop(number) {
-for(var x = 0; x <= array.length; x++) {
-  if ( x % 3 === 0) {
-    results.push("I'm sorry, Dave. I'm afraid I can't do that");
-    } else if (x.toString().includes("1")) {
-      results.push("Beep!");
-    } else if (x.toString().includes("0")) {
-      results.push("Boop!");
-    }
-    else {
-      results.push(x);
-      }
-
-}
-}
-
-
 $(document).ready(function () {
   $("form#ourForm").submit(function(event) {
     event.preventDefault();
     var varInput = parseInt($("#submitField").val());
-    var brokenDownNumb = countDown(varInput);
-    function countDown(number) {
-      for(var i = 0; i <= varInput; i++) {
-        array.push(i);
-        console.log(array);
-        var stringTheory = array.toString().split("");
-      }
-      var resultsMaybe = blahboop(stringTheory);
+    if (varInput % 3 === 0) {
+      $("#result").text("I'm sorry, Dave. I'm afraid I can't do that");
+    } else {
+    var resultMaybe = justForFun(varInput);
+    $("#result").text(results);
+    // $("#result").show();
+    }
+    
+    function justForFun(number) {
+      for (var x = 0; x<= varInput; x++) {
+        if (x.toString().includes("1")) {
+        results.push("Boop!");
+        } else if (x.toString().includes("0")) {
+        results.push("Beep!");
+      } else if ( x.toString() % 3 === 0) {
+          results.push("I'm sorry, Dave. I'm afraid I can't do that");
+        } else {
+          results.push(x);
+          }
+          console.log(results);
+          }
+        }
 
-            console.log(resultsMaybe);
-
-            }
-$("#result").text(results);
 
 
-});
-});
+  });
+
+    });
