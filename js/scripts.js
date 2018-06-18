@@ -10,9 +10,10 @@ $(document).ready(function () {
     } else {
     var resultMaybe = justForFun(varInput);
     $("#result").text(results);
+    $("form#submitField").trigger('reset');
     // $("#result").show();
     }
-    
+
     function justForFun(number) {
       for (var x = 0; x<= varInput; x++) {
         if (x.toString().includes("1")) {
